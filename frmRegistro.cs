@@ -74,16 +74,21 @@ namespace pryPonssaIEFI
             else
             {
                 MessageBox.Show("Datos guardados");
+                Inicializar();
             }
             return resultado;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
-            ChequearDatos();
-            
-            //Inicializar();
+            if (ChequearDatos() == true)
+            {
+                
+            }
+            else
+            {
+                Inicializar();
+            }
         }
     }
 }
