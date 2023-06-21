@@ -5,16 +5,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-using System.IO;
 
 namespace pryPonssaIEFI
 {
-    internal class clsManejo
+    public class clsManejo
     {
-        OleDbConnection conn;
-        OleDbCommand cmd;
+        OleDbConnection conn = new OleDbConnection();
+        OleDbCommand cmd = new OleDbCommand();
         OleDbDataReader rdr;
 
-        string RutaAcceso
+        public string RutaBD;
+        public void ConectarBD()
+        {
+            RutaBD = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\EL_CLUB.accdb";
+            try
+            {
+                conn.ConnectionString = RutaBD;
+                conn.Open();
+                MessageBox.Show("Base de Datos conectada");
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+        }
+
     }
 }

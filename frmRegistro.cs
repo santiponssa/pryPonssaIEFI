@@ -23,5 +23,11 @@ namespace pryPonssaIEFI
         {
 
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            clsManejo objCls = new clsManejo();
+            objCls.ConectarBD();
+        }
     }
 }
