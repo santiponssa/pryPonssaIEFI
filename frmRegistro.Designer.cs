@@ -34,7 +34,6 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblPais = new System.Windows.Forms.Label();
             this.lblEdad = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtPais = new System.Windows.Forms.TextBox();
             this.optHombre = new System.Windows.Forms.RadioButton();
@@ -44,6 +43,7 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtConexion = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.mrcDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,13 +112,6 @@
             this.lblEdad.Size = new System.Drawing.Size(32, 13);
             this.lblEdad.TabIndex = 3;
             this.lblEdad.Text = "Edad";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(141, 42);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 4;
             // 
             // txtApellido
             // 
@@ -203,6 +196,13 @@
             this.txtConexion.Size = new System.Drawing.Size(47, 13);
             this.txtConexion.TabIndex = 4;
             // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(141, 42);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 4;
+            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,7 +235,6 @@
         private System.Windows.Forms.RadioButton optHombre;
         private System.Windows.Forms.TextBox txtPais;
         private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.Label lblPais;
         private System.Windows.Forms.Label lblApellido;
@@ -243,6 +242,7 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.TextBox txtConexion;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }
 

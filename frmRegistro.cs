@@ -44,8 +44,10 @@ namespace pryPonssaIEFI
                 MessageBox.Show(exc.Message);
             }
         }
-        public void ChequearDatos()
+        public bool ChequearDatos()
         {
+            bool resultado;
+            resultado = false;
             if (txtNombre.Text != null)
             {
                 if (txtApellido.Text != null)
@@ -54,21 +56,34 @@ namespace pryPonssaIEFI
                     {
                         if (mtxtEdad.Text != null)
                         {
-                            if (optHombre.Checked = false)
+                            if (optHombre.Checked == false)
                             {
-                                if (optMujer.Checked = false)
+                                if (optMujer.Checked == false)
                                 {
-                                    MessageBox.Show("Ingresar todos los datos del miembro");
+                                    resultado = true;
                                 }
                             }
                         }
                     }
                 }
             }
+            if (resultado == true)
+            {
+                MessageBox.Show("Ingresar todos los datos del miembro");
+            }
+            else
+            {
+                MessageBox.Show("Datos guardados");
+            }
+            return resultado;
         }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+
+            ChequearDatos();
             
+            //Inicializar();
         }
     }
 }
