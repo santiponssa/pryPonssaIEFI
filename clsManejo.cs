@@ -29,7 +29,9 @@ namespace pryPonssaIEFI
                 MessageBox.Show("Error: " + error.Message);
             }
         }
-        
-
+        public void RegistrarBD()
+        {
+            
+        }
     }
 }
