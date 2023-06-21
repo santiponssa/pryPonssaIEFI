@@ -81,11 +81,7 @@ namespace pryPonssaIEFI
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (ChequearDatos() == true)
-            {
-                
-            }
-            else
+            if (ChequearDatos() == false)
             {
                 Inicializar();
             }
