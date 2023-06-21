@@ -43,6 +43,7 @@
             this.mtxtEdad = new System.Windows.Forms.MaskedTextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
+            this.txtConexion = new System.Windows.Forms.TextBox();
             this.mrcDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -169,7 +170,7 @@
             this.mtxtEdad.Location = new System.Drawing.Point(141, 155);
             this.mtxtEdad.Mask = "999";
             this.mtxtEdad.Name = "mtxtEdad";
-            this.mtxtEdad.Size = new System.Drawing.Size(24, 20);
+            this.mtxtEdad.Size = new System.Drawing.Size(27, 20);
             this.mtxtEdad.TabIndex = 10;
             this.mtxtEdad.ValidatingType = typeof(int);
             // 
@@ -192,12 +193,23 @@
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             // 
+            // txtConexion
+            // 
+            this.txtConexion.BackColor = System.Drawing.Color.Silver;
+            this.txtConexion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConexion.Location = new System.Drawing.Point(424, 301);
+            this.txtConexion.Name = "txtConexion";
+            this.txtConexion.ReadOnly = true;
+            this.txtConexion.Size = new System.Drawing.Size(47, 13);
+            this.txtConexion.TabIndex = 4;
+            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(505, 330);
+            this.Controls.Add(this.txtConexion);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.mrcDatos);
@@ -230,6 +242,7 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.TextBox txtConexion;
     }
 }
 

@@ -31,7 +31,18 @@ namespace pryPonssaIEFI
         }
         private void frmRegistro_Load(object sender, EventArgs e)
         {
+            clsManejo objCls = new clsManejo();
+            try
+            {
+                objCls.ConectarBD();
+                txtConexion.BackColor = Color.Green;
 
+            }
+            catch (Exception exc)
+            {
+                txtConexion.BackColor = Color.Red;
+                MessageBox.Show(exc.Message);
+            }
         }
         public void ChequearDatos()
         {
@@ -43,7 +54,13 @@ namespace pryPonssaIEFI
                     {
                         if (mtxtEdad.Text != null)
                         {
-                            if (optHombre)
+                            if (optHombre.Checked = false)
+                            {
+                                if (optMujer.Checked = false)
+                                {
+                                    MessageBox.Show("Ingresar todos los datos del miembro");
+                                }
+                            }
                         }
                     }
                 }
@@ -51,8 +68,7 @@ namespace pryPonssaIEFI
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            clsManejo objCls = new clsManejo();
-            objCls.ConectarBD();
+            
         }
     }
 }

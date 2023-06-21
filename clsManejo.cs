@@ -22,7 +22,7 @@ namespace pryPonssaIEFI
             {
                 conn.ConnectionString = RutaBD;
                 conn.Open();
-                MessageBox.Show("Base de Datos conectada");
+                //MessageBox.Show("Base de Datos conectada");
             }
             catch (Exception error)
             {
