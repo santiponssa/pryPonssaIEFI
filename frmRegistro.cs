@@ -27,8 +27,8 @@ namespace pryPonssaIEFI
             optHombre.Checked = false;
             optMujer.Checked = false;
             txtNombre.Focus();
-
         }
+
         private void frmRegistro_Load(object sender, EventArgs e)
         {
             clsManejo objCls = new clsManejo();
@@ -81,10 +81,7 @@ namespace pryPonssaIEFI
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (ChequearDatos() == false)
-            {
-                Inicializar();
-            }
+            ChequearDatos();
         }
     }
 }
