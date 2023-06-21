@@ -167,9 +167,11 @@
             // mtxtEdad
             // 
             this.mtxtEdad.Location = new System.Drawing.Point(141, 155);
+            this.mtxtEdad.Mask = "999";
             this.mtxtEdad.Name = "mtxtEdad";
-            this.mtxtEdad.Size = new System.Drawing.Size(64, 20);
+            this.mtxtEdad.Size = new System.Drawing.Size(24, 20);
             this.mtxtEdad.TabIndex = 10;
+            this.mtxtEdad.ValidatingType = typeof(int);
             // 
             // btnRegistrar
             // 

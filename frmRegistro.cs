@@ -18,12 +18,37 @@ namespace pryPonssaIEFI
         {
             InitializeComponent();
         }
+        public void Inicializar()
+        {
+            txtNombre.Text = null;
+            txtApellido.Text = null;
+            txtPais.Text = null;
+            mtxtEdad.Text = null;
+            optHombre.Checked = false;
+            optMujer.Checked = false;
+            txtNombre.Focus();
 
+        }
         private void frmRegistro_Load(object sender, EventArgs e)
         {
 
         }
-
+        public void ChequearDatos()
+        {
+            if (txtNombre.Text != null)
+            {
+                if (txtApellido.Text != null)
+                {
+                    if (txtPais.Text != null)
+                    {
+                        if (mtxtEdad.Text != null)
+                        {
+                            if (optHombre)
+                        }
+                    }
+                }
+            }
+        }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             clsManejo objCls = new clsManejo();
