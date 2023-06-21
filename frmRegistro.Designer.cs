@@ -1,6 +1,6 @@
 ﻿namespace pryPonssaIEFI
 {
-    partial class Form1
+    partial class frmRegistro
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -30,13 +30,16 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(464, 364);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frmRegistro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Registro de miembro";
+            this.Load += new System.EventHandler(this.frmRegistro_Load);
             this.ResumeLayout(false);
 
         }
