@@ -69,7 +69,7 @@ namespace pryPonssaIEFI
                 comm.Parameters.AddWithValue("@Nombre", Nombre);
                 comm.Parameters.AddWithValue("@Apellido", Apellido);
                 comm.Parameters.AddWithValue("@LugarNac", LugarNac);
-                comm.Parameters.AddWithValue("@edad", Edad);
+                comm.Parameters.AddWithValue("@Edad", Edad);
                 comm.Parameters.AddWithValue("@Sexo", Sexo);
                 comm.Parameters.AddWithValue("@Ingreso", Ingreso);
                 comm.ExecuteNonQuery();
