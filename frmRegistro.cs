@@ -102,7 +102,7 @@ namespace pryPonssaIEFI
                     sexo = false;
                 }
             }
-            objCls.RegistrarBD(txtNombre.Text, txtApellido.Text, lstPais.Text, Convert.ToInt32(mtxtEdad.Text), sexo, "$ 1.000");
+            objCls.RegistrarBD(txtNombre.Text, txtApellido.Text, lstPais.Text, Convert.ToInt16(mtxtEdad.Text), sexo, "$ 1.000");
             //reinicio todos los datos para poder seguir registrando otros miembros
             Inicializar();
         }
