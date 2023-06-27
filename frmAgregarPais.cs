@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryPonssaIEFI
 {
-    public partial class Form1 : Form
+    public partial class frmAgregarPais : Form
     {
-        public Form1()
+        public frmAgregarPais()
         {
             InitializeComponent();
         }

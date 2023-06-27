@@ -19,33 +19,36 @@ namespace pryPonssaIEFI
             InitializeComponent();
         }
 
-        clsManejo objCls = new clsManejo();
-        OleDbConnection conn = new OleDbConnection();
-        OleDbCommand comm = new OleDbCommand();
-        OleDbDataReader rdr;
+        //creo el objeto aca "afuera" para usarlo en todo el codigo
+        clsManejoBD objCls = new clsManejoBD();
 
+        //estado inicial del form
         public void Inicializar()
         {
             txtNombre.Text = null;
             txtApellido.Text = null;
-            txtPais.Text = null;
+            lstPais.SelectedIndex = -1;
             mtxtEdad.Text = null;
-            lstSexo.SelectedIndex = -1;
+            optHombre.Checked = false;
+            optMujer.Checked = false;
             txtNombre.Focus();
         }
 
+        //conectar la BD ni bien abre el form
         private void frmRegistro_Load(object sender, EventArgs e)
         {
-            
             try
             {
                 objCls.ConectarBD();
+                objCls.CargarLstPais(lstPais);
             }
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
             }
         }
+
+        //verificar que todos los datos estan ingresados correctamente
         public bool ChequearDatos()
         {
             bool resultado;
@@ -54,13 +57,16 @@ namespace pryPonssaIEFI
             {
                 if (txtApellido.Text != null)
                 {
-                    if (txtPais.Text != null)
+                    if (lstPais.SelectedIndex == -1)
                     {
                         if (mtxtEdad.Text != null)
                         {
-                            if (lstSexo.SelectedIndex == -1)
+                            if (optHombre.Checked == false)
                             {
-                                resultado = true;
+                                if (optMujer.Checked == false)
+                                {
+                                    resultado = true;
+                                }
                             }
                         }
                     }
@@ -80,17 +86,33 @@ namespace pryPonssaIEFI
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            //antes de registrar chequea que todos los datos esten ingresados correctamente
             ChequearDatos();
-            try
-            {
-                string agregar = "insert into SOCIOS values (" + txtNombre.Text + "','" + txtApellido.Text +
-                "','" + txtPais.Text + "'," + mtxtEdad + ",'" + lstSexo.SelectedIndex + ")";
 
-            }
-            catch (Exception error)
+            //booleano para determinar el tipo de sexo utilizando el boton de opcion
+            bool sexo = true;
+            if (optHombre.Checked == true)
             {
-                MessageBox.Show(error.Message);
+                sexo = true;
             }
+            else
+            {
+                if (optMujer.Checked == true)
+                {
+                    sexo = false;
+                }
+            }
+            objCls.RegistrarBD(txtNombre.Text, txtApellido.Text, lstPais.Text, Convert.ToInt32(mtxtEdad.Text), sexo, "$ 1.000");
+            //reinicio todos los datos para poder seguir registrando otros miembros
+            Inicializar();
+        }
+
+        //abrir el otro form para registrar un nuevo pais
+        private void btnAgregarPais_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAgregarPais frm = new frmAgregarPais();
+            frm.ShowDialog();
         }
     }
 }

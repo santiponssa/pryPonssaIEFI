@@ -30,9 +30,10 @@
         {
             this.lblTitulo = new System.Windows.Forms.Label();
             this.mrcDatos = new System.Windows.Forms.GroupBox();
+            this.optMujer = new System.Windows.Forms.RadioButton();
+            this.optHombre = new System.Windows.Forms.RadioButton();
             this.mtxtEdad = new System.Windows.Forms.MaskedTextBox();
             this.lblSexo = new System.Windows.Forms.Label();
-            this.txtPais = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblEdad = new System.Windows.Forms.Label();
@@ -40,8 +41,8 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.lstSexo = new System.Windows.Forms.ComboBox();
+            this.btnAgregarPais = new System.Windows.Forms.Button();
+            this.lstPais = new System.Windows.Forms.ComboBox();
             this.mrcDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,10 +58,11 @@
             // 
             // mrcDatos
             // 
-            this.mrcDatos.Controls.Add(this.lstSexo);
+            this.mrcDatos.Controls.Add(this.lstPais);
+            this.mrcDatos.Controls.Add(this.optMujer);
+            this.mrcDatos.Controls.Add(this.optHombre);
             this.mrcDatos.Controls.Add(this.mtxtEdad);
             this.mrcDatos.Controls.Add(this.lblSexo);
-            this.mrcDatos.Controls.Add(this.txtPais);
             this.mrcDatos.Controls.Add(this.txtApellido);
             this.mrcDatos.Controls.Add(this.txtNombre);
             this.mrcDatos.Controls.Add(this.lblEdad);
@@ -73,6 +75,28 @@
             this.mrcDatos.TabIndex = 1;
             this.mrcDatos.TabStop = false;
             this.mrcDatos.Text = "Datos del miembro";
+            // 
+            // optMujer
+            // 
+            this.optMujer.AutoSize = true;
+            this.optMujer.Location = new System.Drawing.Point(216, 191);
+            this.optMujer.Name = "optMujer";
+            this.optMujer.Size = new System.Drawing.Size(51, 17);
+            this.optMujer.TabIndex = 12;
+            this.optMujer.TabStop = true;
+            this.optMujer.Text = "Mujer";
+            this.optMujer.UseVisualStyleBackColor = true;
+            // 
+            // optHombre
+            // 
+            this.optHombre.AutoSize = true;
+            this.optHombre.Location = new System.Drawing.Point(141, 191);
+            this.optHombre.Name = "optHombre";
+            this.optHombre.Size = new System.Drawing.Size(62, 17);
+            this.optHombre.TabIndex = 11;
+            this.optHombre.TabStop = true;
+            this.optHombre.Text = "Hombre";
+            this.optHombre.UseVisualStyleBackColor = true;
             // 
             // mtxtEdad
             // 
@@ -91,13 +115,6 @@
             this.lblSexo.Size = new System.Drawing.Size(31, 13);
             this.lblSexo.TabIndex = 9;
             this.lblSexo.Text = "Sexo";
-            // 
-            // txtPais
-            // 
-            this.txtPais.Location = new System.Drawing.Point(141, 119);
-            this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(100, 20);
-            this.txtPais.TabIndex = 6;
             // 
             // txtApellido
             // 
@@ -159,26 +176,24 @@
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // btnConsultar
+            // btnAgregarPais
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(402, 192);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(91, 38);
-            this.btnConsultar.TabIndex = 3;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnAgregarPais.Location = new System.Drawing.Point(402, 192);
+            this.btnAgregarPais.Name = "btnAgregarPais";
+            this.btnAgregarPais.Size = new System.Drawing.Size(91, 38);
+            this.btnAgregarPais.TabIndex = 3;
+            this.btnAgregarPais.Text = "Agregar País";
+            this.btnAgregarPais.UseVisualStyleBackColor = true;
+            this.btnAgregarPais.Click += new System.EventHandler(this.btnAgregarPais_Click);
             // 
-            // lstSexo
+            // lstPais
             // 
-            this.lstSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.lstSexo.FormattingEnabled = true;
-            this.lstSexo.Items.AddRange(new object[] {
-            "Hombre",
-            "Mujer"});
-            this.lstSexo.Location = new System.Drawing.Point(141, 190);
-            this.lstSexo.Name = "lstSexo";
-            this.lstSexo.Size = new System.Drawing.Size(110, 21);
-            this.lstSexo.TabIndex = 11;
+            this.lstPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.lstPais.FormattingEnabled = true;
+            this.lstPais.Location = new System.Drawing.Point(141, 119);
+            this.lstPais.Name = "lstPais";
+            this.lstPais.Size = new System.Drawing.Size(100, 21);
+            this.lstPais.TabIndex = 13;
             // 
             // frmRegistro
             // 
@@ -186,7 +201,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(505, 330);
-            this.Controls.Add(this.btnConsultar);
+            this.Controls.Add(this.btnAgregarPais);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.mrcDatos);
             this.Controls.Add(this.lblTitulo);
@@ -207,16 +222,17 @@
         private System.Windows.Forms.GroupBox mrcDatos;
         private System.Windows.Forms.MaskedTextBox mtxtEdad;
         private System.Windows.Forms.Label lblSexo;
-        private System.Windows.Forms.TextBox txtPais;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.Label lblPais;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.Button btnAgregarPais;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.ComboBox lstSexo;
+        private System.Windows.Forms.RadioButton optMujer;
+        private System.Windows.Forms.RadioButton optHombre;
+        private System.Windows.Forms.ComboBox lstPais;
     }
 }
 
