@@ -18,29 +18,31 @@ namespace pryPonssaIEFI
         {
             InitializeComponent();
         }
+
+        clsManejo objCls = new clsManejo();
+        OleDbConnection conn = new OleDbConnection();
+        OleDbCommand comm = new OleDbCommand();
+        OleDbDataReader rdr;
+
         public void Inicializar()
         {
             txtNombre.Text = null;
             txtApellido.Text = null;
             txtPais.Text = null;
             mtxtEdad.Text = null;
-            optHombre.Checked = false;
-            optMujer.Checked = false;
+            lstSexo.SelectedIndex = -1;
             txtNombre.Focus();
         }
 
         private void frmRegistro_Load(object sender, EventArgs e)
         {
-            clsManejo objCls = new clsManejo();
+            
             try
             {
                 objCls.ConectarBD();
-                txtConexion.BackColor = Color.Green;
-
             }
             catch (Exception exc)
             {
-                txtConexion.BackColor = Color.Red;
                 MessageBox.Show(exc.Message);
             }
         }
@@ -56,12 +58,9 @@ namespace pryPonssaIEFI
                     {
                         if (mtxtEdad.Text != null)
                         {
-                            if (optHombre.Checked == false)
+                            if (lstSexo.SelectedIndex == -1)
                             {
-                                if (optMujer.Checked == false)
-                                {
-                                    resultado = true;
-                                }
+                                resultado = true;
                             }
                         }
                     }
@@ -82,6 +81,16 @@ namespace pryPonssaIEFI
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             ChequearDatos();
+            try
+            {
+                string agregar = "insert into SOCIOS values (" + txtNombre.Text + "','" + txtApellido.Text +
+                "','" + txtPais.Text + "'," + mtxtEdad + ",'" + lstSexo.SelectedIndex + ")";
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
     }
 }

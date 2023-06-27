@@ -100,38 +100,38 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="EL_CLUBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="EL_CLUBDataSet" msprop:Generator_DataSetName="EL_CLUBDataSet">
+  <xs:element name="EL_CLUBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="EL_CLUBDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="EL_CLUBDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="SOCIOS" msprop:Generator_RowEvHandlerName="SOCIOSRowChangeEventHandler" msprop:Generator_RowDeletedName="SOCIOSRowDeleted" msprop:Generator_RowDeletingName="SOCIOSRowDeleting" msprop:Generator_RowEvArgName="SOCIOSRowChangeEvent" msprop:Generator_TablePropName="SOCIOS" msprop:Generator_RowChangedName="SOCIOSRowChanged" msprop:Generator_RowChangingName="SOCIOSRowChanging" msprop:Generator_TableClassName="SOCIOSDataTable" msprop:Generator_RowClassName="SOCIOSRow" msprop:Generator_TableVarName="tableSOCIOS" msprop:Generator_UserTableName="SOCIOS">
+        <xs:element name="SOCIOS" msprop:Generator_RowEvHandlerName="SOCIOSRowChangeEventHandler" msprop:Generator_RowDeletedName="SOCIOSRowDeleted" msprop:Generator_RowDeletingName="SOCIOSRowDeleting" msprop:Generator_RowEvArgName="SOCIOSRowChangeEvent" msprop:Generator_TablePropName="SOCIOS" msprop:Generator_RowChangedName="SOCIOSRowChanged" msprop:Generator_UserTableName="SOCIOS" msprop:Generator_RowChangingName="SOCIOSRowChanging" msprop:Generator_RowClassName="SOCIOSRow" msprop:Generator_TableClassName="SOCIOSDataTable" msprop:Generator_TableVarName="tableSOCIOS">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="CODIGO_SOCIO" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="CODIGO_SOCIO" msprop:Generator_ColumnPropNameInTable="CODIGO_SOCIOColumn" msprop:Generator_ColumnVarNameInTable="columnCODIGO_SOCIO" msprop:Generator_UserColumnName="CODIGO_SOCIO" type="xs:int" />
-              <xs:element name="NOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_UserColumnName="NOMBRE" minOccurs="0">
+              <xs:element name="CODIGO_SOCIO" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="CODIGO_SOCIOColumn" msprop:Generator_ColumnPropNameInRow="CODIGO_SOCIO" msprop:Generator_UserColumnName="CODIGO_SOCIO" msprop:Generator_ColumnVarNameInTable="columnCODIGO_SOCIO" type="xs:int" />
+              <xs:element name="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="APELLIDO" msprop:Generator_ColumnPropNameInRow="APELLIDO" msprop:Generator_ColumnPropNameInTable="APELLIDOColumn" msprop:Generator_ColumnVarNameInTable="columnAPELLIDO" msprop:Generator_UserColumnName="APELLIDO" minOccurs="0">
+              <xs:element name="APELLIDO" msprop:Generator_ColumnPropNameInTable="APELLIDOColumn" msprop:Generator_ColumnPropNameInRow="APELLIDO" msprop:Generator_UserColumnName="APELLIDO" msprop:Generator_ColumnVarNameInTable="columnAPELLIDO" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="LUGAR_NACIMIENTO" msprop:Generator_ColumnPropNameInRow="LUGAR_NACIMIENTO" msprop:Generator_ColumnPropNameInTable="LUGAR_NACIMIENTOColumn" msprop:Generator_ColumnVarNameInTable="columnLUGAR_NACIMIENTO" msprop:Generator_UserColumnName="LUGAR_NACIMIENTO" minOccurs="0">
+              <xs:element name="LUGAR_NACIMIENTO" msprop:Generator_ColumnPropNameInTable="LUGAR_NACIMIENTOColumn" msprop:Generator_ColumnPropNameInRow="LUGAR_NACIMIENTO" msprop:Generator_UserColumnName="LUGAR_NACIMIENTO" msprop:Generator_ColumnVarNameInTable="columnLUGAR_NACIMIENTO" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="EDAD" msprop:Generator_ColumnPropNameInRow="EDAD" msprop:Generator_ColumnPropNameInTable="EDADColumn" msprop:Generator_ColumnVarNameInTable="columnEDAD" msprop:Generator_UserColumnName="EDAD" type="xs:int" minOccurs="0" />
-              <xs:element name="SEXO" msprop:Generator_ColumnPropNameInRow="SEXO" msprop:Generator_ColumnPropNameInTable="SEXOColumn" msprop:Generator_ColumnVarNameInTable="columnSEXO" msprop:Generator_UserColumnName="SEXO" type="xs:boolean" minOccurs="0" />
-              <xs:element name="INGRESO" msprop:Generator_ColumnPropNameInRow="INGRESO" msprop:Generator_ColumnPropNameInTable="INGRESOColumn" msprop:Generator_ColumnVarNameInTable="columnINGRESO" msprop:Generator_UserColumnName="INGRESO" type="xs:decimal" minOccurs="0" />
-              <xs:element name="PUNTAJE" msprop:Generator_ColumnPropNameInRow="PUNTAJE" msprop:Generator_ColumnPropNameInTable="PUNTAJEColumn" msprop:Generator_ColumnVarNameInTable="columnPUNTAJE" msprop:Generator_UserColumnName="PUNTAJE" type="xs:int" minOccurs="0" />
+              <xs:element name="EDAD" msprop:Generator_ColumnPropNameInTable="EDADColumn" msprop:Generator_ColumnPropNameInRow="EDAD" msprop:Generator_UserColumnName="EDAD" msprop:Generator_ColumnVarNameInTable="columnEDAD" type="xs:int" minOccurs="0" />
+              <xs:element name="SEXO" msprop:Generator_ColumnPropNameInTable="SEXOColumn" msprop:Generator_ColumnPropNameInRow="SEXO" msprop:Generator_UserColumnName="SEXO" msprop:Generator_ColumnVarNameInTable="columnSEXO" type="xs:boolean" minOccurs="0" />
+              <xs:element name="INGRESO" msprop:Generator_ColumnPropNameInTable="INGRESOColumn" msprop:Generator_ColumnPropNameInRow="INGRESO" msprop:Generator_UserColumnName="INGRESO" msprop:Generator_ColumnVarNameInTable="columnINGRESO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PUNTAJE" msprop:Generator_ColumnPropNameInTable="PUNTAJEColumn" msprop:Generator_ColumnPropNameInRow="PUNTAJE" msprop:Generator_UserColumnName="PUNTAJE" msprop:Generator_ColumnVarNameInTable="columnPUNTAJE" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

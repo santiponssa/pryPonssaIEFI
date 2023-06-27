@@ -30,20 +30,18 @@
         {
             this.lblTitulo = new System.Windows.Forms.Label();
             this.mrcDatos = new System.Windows.Forms.GroupBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.lblPais = new System.Windows.Forms.Label();
-            this.lblEdad = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtPais = new System.Windows.Forms.TextBox();
-            this.optHombre = new System.Windows.Forms.RadioButton();
-            this.optMujer = new System.Windows.Forms.RadioButton();
-            this.lblSexo = new System.Windows.Forms.Label();
             this.mtxtEdad = new System.Windows.Forms.MaskedTextBox();
+            this.lblSexo = new System.Windows.Forms.Label();
+            this.txtPais = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblEdad = new System.Windows.Forms.Label();
+            this.lblPais = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.txtConexion = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lstSexo = new System.Windows.Forms.ComboBox();
             this.mrcDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,10 +57,9 @@
             // 
             // mrcDatos
             // 
+            this.mrcDatos.Controls.Add(this.lstSexo);
             this.mrcDatos.Controls.Add(this.mtxtEdad);
             this.mrcDatos.Controls.Add(this.lblSexo);
-            this.mrcDatos.Controls.Add(this.optMujer);
-            this.mrcDatos.Controls.Add(this.optHombre);
             this.mrcDatos.Controls.Add(this.txtPais);
             this.mrcDatos.Controls.Add(this.txtApellido);
             this.mrcDatos.Controls.Add(this.txtNombre);
@@ -77,77 +74,14 @@
             this.mrcDatos.TabStop = false;
             this.mrcDatos.Text = "Datos del miembro";
             // 
-            // lblNombre
+            // mtxtEdad
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(34, 45);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre";
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(34, 84);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(44, 13);
-            this.lblApellido.TabIndex = 1;
-            this.lblApellido.Text = "Apellido";
-            // 
-            // lblPais
-            // 
-            this.lblPais.AutoSize = true;
-            this.lblPais.Location = new System.Drawing.Point(34, 122);
-            this.lblPais.Name = "lblPais";
-            this.lblPais.Size = new System.Drawing.Size(103, 13);
-            this.lblPais.TabIndex = 2;
-            this.lblPais.Text = "Lugar de nacimiento";
-            // 
-            // lblEdad
-            // 
-            this.lblEdad.AutoSize = true;
-            this.lblEdad.Location = new System.Drawing.Point(34, 158);
-            this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(32, 13);
-            this.lblEdad.TabIndex = 3;
-            this.lblEdad.Text = "Edad";
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Location = new System.Drawing.Point(141, 81);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(100, 20);
-            this.txtApellido.TabIndex = 5;
-            // 
-            // txtPais
-            // 
-            this.txtPais.Location = new System.Drawing.Point(141, 119);
-            this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(100, 20);
-            this.txtPais.TabIndex = 6;
-            // 
-            // optHombre
-            // 
-            this.optHombre.AutoSize = true;
-            this.optHombre.Location = new System.Drawing.Point(141, 191);
-            this.optHombre.Name = "optHombre";
-            this.optHombre.Size = new System.Drawing.Size(62, 17);
-            this.optHombre.TabIndex = 7;
-            this.optHombre.TabStop = true;
-            this.optHombre.Text = "Hombre";
-            this.optHombre.UseVisualStyleBackColor = true;
-            // 
-            // optMujer
-            // 
-            this.optMujer.AutoSize = true;
-            this.optMujer.Location = new System.Drawing.Point(218, 191);
-            this.optMujer.Name = "optMujer";
-            this.optMujer.Size = new System.Drawing.Size(51, 17);
-            this.optMujer.TabIndex = 8;
-            this.optMujer.TabStop = true;
-            this.optMujer.Text = "Mujer";
-            this.optMujer.UseVisualStyleBackColor = true;
+            this.mtxtEdad.Location = new System.Drawing.Point(141, 155);
+            this.mtxtEdad.Mask = "99";
+            this.mtxtEdad.Name = "mtxtEdad";
+            this.mtxtEdad.Size = new System.Drawing.Size(27, 20);
+            this.mtxtEdad.TabIndex = 10;
+            this.mtxtEdad.ValidatingType = typeof(int);
             // 
             // lblSexo
             // 
@@ -158,14 +92,62 @@
             this.lblSexo.TabIndex = 9;
             this.lblSexo.Text = "Sexo";
             // 
-            // mtxtEdad
+            // txtPais
             // 
-            this.mtxtEdad.Location = new System.Drawing.Point(141, 155);
-            this.mtxtEdad.Mask = "999";
-            this.mtxtEdad.Name = "mtxtEdad";
-            this.mtxtEdad.Size = new System.Drawing.Size(27, 20);
-            this.mtxtEdad.TabIndex = 10;
-            this.mtxtEdad.ValidatingType = typeof(int);
+            this.txtPais.Location = new System.Drawing.Point(141, 119);
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(100, 20);
+            this.txtPais.TabIndex = 6;
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Location = new System.Drawing.Point(141, 81);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(100, 20);
+            this.txtApellido.TabIndex = 5;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(141, 42);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 4;
+            // 
+            // lblEdad
+            // 
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.Location = new System.Drawing.Point(34, 158);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(32, 13);
+            this.lblEdad.TabIndex = 3;
+            this.lblEdad.Text = "Edad";
+            // 
+            // lblPais
+            // 
+            this.lblPais.AutoSize = true;
+            this.lblPais.Location = new System.Drawing.Point(34, 122);
+            this.lblPais.Name = "lblPais";
+            this.lblPais.Size = new System.Drawing.Size(103, 13);
+            this.lblPais.TabIndex = 2;
+            this.lblPais.Text = "Lugar de nacimiento";
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(34, 84);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(44, 13);
+            this.lblApellido.TabIndex = 1;
+            this.lblApellido.Text = "Apellido";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(34, 45);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre";
             // 
             // btnRegistrar
             // 
@@ -186,22 +168,17 @@
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             // 
-            // txtConexion
+            // lstSexo
             // 
-            this.txtConexion.BackColor = System.Drawing.Color.Silver;
-            this.txtConexion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConexion.Location = new System.Drawing.Point(424, 301);
-            this.txtConexion.Name = "txtConexion";
-            this.txtConexion.ReadOnly = true;
-            this.txtConexion.Size = new System.Drawing.Size(47, 13);
-            this.txtConexion.TabIndex = 4;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(141, 42);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 4;
+            this.lstSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.lstSexo.FormattingEnabled = true;
+            this.lstSexo.Items.AddRange(new object[] {
+            "Hombre",
+            "Mujer"});
+            this.lstSexo.Location = new System.Drawing.Point(141, 190);
+            this.lstSexo.Name = "lstSexo";
+            this.lstSexo.Size = new System.Drawing.Size(110, 21);
+            this.lstSexo.TabIndex = 11;
             // 
             // frmRegistro
             // 
@@ -209,7 +186,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(505, 330);
-            this.Controls.Add(this.txtConexion);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.mrcDatos);
@@ -231,8 +207,6 @@
         private System.Windows.Forms.GroupBox mrcDatos;
         private System.Windows.Forms.MaskedTextBox mtxtEdad;
         private System.Windows.Forms.Label lblSexo;
-        private System.Windows.Forms.RadioButton optMujer;
-        private System.Windows.Forms.RadioButton optHombre;
         private System.Windows.Forms.TextBox txtPais;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label lblEdad;
@@ -241,8 +215,8 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.TextBox txtConexion;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.ComboBox lstSexo;
     }
 }
 

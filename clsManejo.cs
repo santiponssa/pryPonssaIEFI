@@ -11,25 +11,25 @@ namespace pryPonssaIEFI
     public class clsManejo
     {
         OleDbConnection conn = new OleDbConnection();
-        OleDbCommand cmd = new OleDbCommand();
+        OleDbCommand comm = new OleDbCommand();
         OleDbDataReader rdr;
 
         public string RutaBD;
         public void ConectarBD()
         {
-            RutaBD = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\EL_CLUB.accdb";
+            RutaBD = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\EL_CLUB.accdb";
             try
             {
                 conn.ConnectionString = RutaBD;
                 conn.Open();
-                //MessageBox.Show("Base de Datos conectada");
+                MessageBox.Show("Base de Datos conectada");
             }
             catch (Exception error)
             {
                 MessageBox.Show("Error: " + error.Message);
             }
         }
-        public void RegistrarBD()
+        public void RegistrarBD(string Nombre, string Apellido, string LugarNac, int Edad, bool Sexo)
         {
             
         }
