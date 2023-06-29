@@ -49,13 +49,14 @@ namespace pryPonssaIEFI
                     //agrego los paises de la tabla en el combo box
                     lstPais.Items.Add(rdr[0].ToString());
                 }
+                rdr.Close();
             }
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
             }
         }
-        public void RegistrarBD(string Nombre, string Apellido, string LugarNac, int Edad, bool Sexo, string Ingreso)
+        public void RegistrarBD(string Nombre, string Apellido, string LugarNac, int Edad, bool Sexo, decimal Ingreso)
         {
             string consultaSql = "INSERT INTO SOCIOS (NOMBRE, APELLIDO, LUGAR_NACIMIENTO, EDAD, SEXO, INGRESO)" +
                      "VALUES (@Nombre, @Apellido, @LugarNac, @Edad, @Sexo, @Ingreso)";

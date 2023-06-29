@@ -79,7 +79,7 @@ namespace pryPonssaIEFI
             else
             {
                 MessageBox.Show("Datos guardados");
-                Inicializar();
+                //Inicializar();
             }
             return resultado;
         }
@@ -90,19 +90,19 @@ namespace pryPonssaIEFI
             ChequearDatos();
 
             //booleano para determinar el tipo de sexo utilizando el boton de opcion
-            bool sexo = true;
+            bool Sexo = true;
             if (optHombre.Checked == true)
             {
-                sexo = true;
+                Sexo = true;
             }
             else
             {
                 if (optMujer.Checked == true)
                 {
-                    sexo = false;
+                    Sexo = false;
                 }
             }
-            objCls.RegistrarBD(txtNombre.Text, txtApellido.Text, lstPais.Text, Convert.ToInt16(mtxtEdad.Text), sexo, "$ 1.000");
+            objCls.RegistrarBD(txtNombre.Text, txtApellido.Text, lstPais.Text, Convert.ToInt16(mtxtEdad.Text), Sexo, 1000);
             //reinicio todos los datos para poder seguir registrando otros miembros
             Inicializar();
         }
@@ -111,8 +111,8 @@ namespace pryPonssaIEFI
         private void btnAgregarPais_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmAgregarPais frm = new frmAgregarPais();
-            frm.ShowDialog();
+            //frmAgregarPais frm = new frmAgregarPais();
+            //frm.ShowDialog();
         }
     }
 }

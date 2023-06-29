@@ -47,17 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsManejoBD.cs" />
-    <Compile Include="EL_CLUBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EL_CLUBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="frmAgregarPais.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAgregarPais.Designer.cs">
-      <DependentUpon>frmAgregarPais.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,9 +55,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAgregarPais.resx">
-      <DependentUpon>frmAgregarPais.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmRegistro.resx">
       <DependentUpon>frmRegistro.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,17 +67,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="EL_CLUBDataSet.xsc">
-      <DependentUpon>EL_CLUBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="EL_CLUBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EL_CLUBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="EL_CLUBDataSet.xss">
-      <DependentUpon>EL_CLUBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
